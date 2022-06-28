@@ -28,6 +28,55 @@ class SecondViewController: UIViewController {
     }
     
     
+    
+    func checkLocationServices() {
+        guard CLLocationManager.locationServicesEnabled() else {return}
+        checkLocationAuthorisationStatus()
+    }
+    
+    
+    func checkLocationAuthorisationStatus() {
+        switch locationManager.authorizationStatus {
+        case .notDetermined:
+            self.locationManager.requestWhenInUseAuthorization()
+        case .authorizedWhenInUse:
+            mapView.showsUserLocation = true
+            locationManager.desiredAccuracy = kCLLocationAccuracyBest
+            locationManager.startUpdatingLocation()
+        default: break
+        }
+    }
+    
+    
+    func zoomOnCurrentLocation(location : CLLocation) {
+        let locationCordinate = CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
+        let region = MKCoordinateRegion(center: locationCordinate, latitudinalMeters: 1000, longitudinalMeters: 1000)
+        mapView.setRegion(region, animated: true)
+    }
+    
+    
+    func dropPinAnnotation() {
+        let annotation = MKPointAnnotation()
+        annotation.coordinate = newCordinate
+        mapView.addAnnotation(annotation)
+    }
+    
+    
+    func extractAddressFromCenter() {
+        let geocoder = CLGeocoder()
+        let location = CLLocation(latitude: newCordinate.latitude, longitude: newCordinate.longitude)
+        geocoder.reverseGeocodeLocation(location) { (placemark, error) in
+            guard let placemark = placemark?.first else {return}
+            let city        = placemark.locality    ?? "---"
+            let street      = placemark.thoroughfare    ?? "---"
+            let state       = placemark.administrativeArea  ?? "---"
+            DispatchQueue.main.async {
+                self.addressLabel.text = street + city + state
+            }
+        }
+    }
+    
+    
         
     func getDirections() {
         let request                         = MKDirections.Request()
