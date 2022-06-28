@@ -20,6 +20,9 @@ class ViewController: UIViewController {
     
     var currentLocation = CLLocation()
     
+    var changesMade = CLLocation()
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -32,6 +35,12 @@ class ViewController: UIViewController {
     func checkLocationServices() {
         guard CLLocationManager.locationServicesEnabled() else {return}
         checkLocationAuthorisationStatus()
+    }
+    
+    func someChangesMadeToCheckChangesInRepository() {
+        
+        print("We are making these chanes just to see how things work in repository")
+        
     }
     
     
