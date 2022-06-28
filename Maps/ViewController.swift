@@ -27,6 +27,9 @@ class ViewController: UIViewController {
         mapView.delegate = self
         locationManager.delegate = self
         checkLocationServices()
+        
+        
+        print("some i changed")
     }
 
     
