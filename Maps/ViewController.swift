@@ -27,9 +27,6 @@ class ViewController: UIViewController {
         mapView.delegate = self
         locationManager.delegate = self
         checkLocationServices()
-        
-        
-        print("making changes to another branch")
     }
 
     

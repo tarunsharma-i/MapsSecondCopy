@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F8A31704286BAA76008EA364 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A31703286BAA76008EA364 /* SecondViewController.swift */; };
 		F8AD8739286AB74100990C95 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8AD8738286AB74100990C95 /* AppDelegate.swift */; };
 		F8AD873B286AB74100990C95 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8AD873A286AB74100990C95 /* SceneDelegate.swift */; };
 		F8AD873D286AB74100990C95 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8AD873C286AB74100990C95 /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F8A31703286BAA76008EA364 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		F8AD8735286AB74100990C95 /* Maps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Maps.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8AD8738286AB74100990C95 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F8AD873A286AB74100990C95 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +61,7 @@
 				F8AD8738286AB74100990C95 /* AppDelegate.swift */,
 				F8AD873A286AB74100990C95 /* SceneDelegate.swift */,
 				F8AD873C286AB74100990C95 /* ViewController.swift */,
+				F8A31703286BAA76008EA364 /* SecondViewController.swift */,
 				F8AD873E286AB74100990C95 /* Main.storyboard */,
 				F8AD8741286AB74400990C95 /* Assets.xcassets */,
 				F8AD8743286AB74400990C95 /* LaunchScreen.storyboard */,
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F8A31704286BAA76008EA364 /* SecondViewController.swift in Sources */,
 				F8AD873D286AB74100990C95 /* ViewController.swift in Sources */,
 				F8AD8739286AB74100990C95 /* AppDelegate.swift in Sources */,
 				F8AD873B286AB74100990C95 /* SceneDelegate.swift in Sources */,
